@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 //This script ensure the correct console is used based on the platform the game is running on. Also used to activate and deactivate the console
+//Currently the same console prefab is used for both Desktop and mobile devices.
 
 public class ConsoleManager : MonoBehaviour
 {
