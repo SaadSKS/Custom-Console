@@ -10,8 +10,8 @@ public class PlayTime : MonoBehaviour
     {
         string sessionTime;
 
-        rawTime = 20308.2442f;
-        //rawTime = Time.fixedUnscaledTime;
+        //rawTime = 20308.2442f; //Test value
+        rawTime = Time.fixedUnscaledTime;
         ms = Mathf.Round(rawTime % 1 * 100);
         s = rawTime - rawTime % 1;
         if (s >= 60) 
@@ -24,8 +24,6 @@ public class PlayTime : MonoBehaviour
             hr = (min - min % 60) / 60;
             min = min % 60;
         }
-
-        //sessionTime = rawTime + "HR:" + hr + " MIN:" + min + " S:" + s + " MS:" + ms;
 
         sessionTime ="Session play time: "+ NumberFormatter(hr.ToString()) + ":" + NumberFormatter(min.ToString()) + ":" + NumberFormatter(s.ToString());
 
